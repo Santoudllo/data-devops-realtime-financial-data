@@ -16,8 +16,10 @@ def fetch_stock_data():
 def produce_messages():
     producer = KafkaProducer(bootstrap_servers=KAFKA_BROKER, value_serializer=lambda v: json.dumps(v).encode('utf-8'))
     stock_data = fetch_stock_data()
+    print(f"Producing message: {stock_data}")  
     producer.send(KAFKA_TOPIC, stock_data)
     producer.flush()
+    producer.close()
 
 if __name__ == "__main__":
     produce_messages()
