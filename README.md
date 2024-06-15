@@ -1,12 +1,12 @@
-# data-devops-realtime-financial-data
+# Data DevOps Realtime Financial Data
 
 ## Description
 
-Ce projet implémente un pipeline complet de Data DevOps pour l'ingestion, le traitement, le stockage et la visualisation de données financières en temps réel à l'aide de l'API IEX Cloud.
+Ce projet implémente un pipeline complet de Data DevOps pour l'ingestion, le traitement, le stockage et la visualisation de données financières en temps réel à l'aide de l'API Finnhub.
 
 ## Structure du Projet
 
-- **ingestion/** : Contient le script Python pour récupérer les données de l'API IEX Cloud et les envoyer à Kafka.
+- **ingestion/** : Contient le script Python pour récupérer les données de l'API Finnhub et les envoyer à Kafka.
 - **kafka/** : Contient les scripts et fichiers de configuration pour déployer Kafka sur Kubernetes.
 - **processing/** : Contient le script PySpark pour le traitement de flux en temps réel.
 - **cassandra/** : Contient le script CQL pour configurer la base de données Cassandra.
@@ -29,7 +29,7 @@ Ce projet implémente un pipeline complet de Data DevOps pour l'ingestion, le tr
 
 1. Cloner le dépôt :
     ```bash
-    git clone https://github.com/Santoudllo/data-devops-realtime-financial-data.git
+    git clone https://github.com/votre-utilisateur/data-devops-realtime-financial-data.git
     cd data-devops-realtime-financial-data
     ```
 
@@ -42,8 +42,8 @@ Ce projet implémente un pipeline complet de Data DevOps pour l'ingestion, le tr
 3. Déployer le producteur de données (ingestion) :
     ```bash
     cd ingestion
-    docker build -t iex-producer .
-    docker run -e API_KEY=your_iex_cloud_api_key iex-producer
+    docker build -t finnhub-producer .
+    docker run -e API_KEY=your_finnhub_api_key finnhub-producer
     ```
 
 4. Déployer le traitement de flux :
