@@ -29,7 +29,7 @@ Ce projet implémente un pipeline complet de Data DevOps pour l'ingestion, le tr
 
 1. Cloner le dépôt :
     ```bash
-    git clone https://github.com/votre-utilisateur/data-devops-realtime-financial-data.git
+    git clone https://github.com/Santoudllo/data-devops-realtime-financial-data.git
     cd data-devops-realtime-financial-data
     ```
 
